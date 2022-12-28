@@ -19,6 +19,18 @@
     <link rel="stylesheet" href="user_validation_style.css">
 </head>
 <body>
+<div class="sidebar">
+        <header>THIKANA</header>
+        <ul>
+         <li><a href="/Provide Info/provide_info.html">Validate Information</a></li>
+         <li><a href="#">Validate Property</a></li>
+         <li><a href="/User Validation/user_validation.html">Validate User</a></li>
+         <li><a href="#">Validate Review</a></li>
+        </ul>
+</div>
+
+<section class="user_validation">
+
 
     <span class="title">User Validation</span>
 
@@ -111,97 +123,7 @@
                             //echo $detailresult;
                             $detailrows=mysqli_fetch_array($detailresult);
                             //here is the validation part
-                            if(isset($_POST['valid_req'])){
-                                if($purp=="Rent"){
-                                    $checkid=$ID;
-                                    //here to change
-                                    $checksql="SELECT * FROM rents WHERE property_id=$checkid";
-                                    $checkresult=mysqli_query($conn, $checksql);
-                                    if(mysqli_num_rows($checkresult)>0){
-                                        $newemail=$userrows['user_email'];
-                                        $update="UPDATE rents SET email='$newemail' WHERE property_id=$checkid";
-                                        $updateresult=mysqli_query($conn, $update);
-                                        if($updateresult){
-                                            // echo
-                                            // "<script> alert('done'); </script> ";
-                                            $dltsql="DELETE FROM request_table WHERE property_id=$checkid";
-                                            mysqli_query($conn, $dltsql);
-                                            unset($_POST['valid_req']);
-                                            echo  
-                                            "<script> alert('done'); window.location.href='admin_purpose_valid.php'; </script> ";
-                                            //header("Location:admin_purpose_valid.php");
-                                        }else{
-                                           echo  "<script> alert('failed'); </script> ";
-                                        }
-                                    }else{
-                                        $inemail=$userrows['user_email'];
-                                        $inid=$ID;
-                                        $insertr="INSERT INTO rents(email, property_id) VALUES ('$inemail', '$inid')";
-                                        $insertrresult=mysqli_query($conn, $insertr);
-                                        if($insertrresult){
-                                            $dltsql="DELETE FROM request_table WHERE property_id=$checkid";
-                                            mysqli_query($conn, $dltsql);
-                                            $updtsql="UPDATE property SET searchable=0 WHERE id=$checkid";
-                                            $updateproperty=mysqli_query($conn, $updtsql);
-                                            unset($_POST['valid_req']);
-                                            echo  
-                                            "<script> alert('done'); window.location.href='admin_purpose_valid.php'; </script> ";
-                                            //header("Location:admin_purpose_valid.php");
-                                        }else{
-                                            echo  "<script> alert('failed'); </script> ";
-                                         }
-                                    }
-                                    
-                                    //implement alter or new insert
-                                }
-                                else if($purp=="Sell"){
-                                    $checkid=$ID;
-                                    $checksql="SELECT * FROM owns WHERE property_id=$checkid";
-                                    $checkresult=mysqli_query($conn, $checksql);
-                                    if(mysqli_num_rows($checkresult)>0){
-                                        $newemail=$userrows['user_email'];
-                                        $update="UPDATE owns SET email='$newemail' WHERE property_id=$checkid";
-                                        $updateresult=mysqli_query($conn, $update);
-                                        if($updateresult){
-                                            $dltsql="DELETE FROM request_table WHERE property_id=$checkid";
-                                            mysqli_query($conn, $dltsql);
-                                            $updtsql="UPDATE property SET searchable=0 WHERE id=$checkid";
-                                            $updateproperty=mysqli_query($conn, $updtsql);
-                                            unset($_POST['valid_req']);
-                                            echo  
-                                            "<script> alert('done'); window.location.href='admin_purpose_valid.php'; </script> ";
-                                            //header("Refresh:0");
-                                        }else{
-                                           echo  "<script> alert('failed'); </script> ";
-                                        }
-                                    }else{
-                                        $inemail=$userrows['user_email'];
-                                        $inid=$ID;
-                                        $insertr="INSERT INTO owns(email, property_id) VALUES ('$inemail', '$inid')";
-                                        $insertrresult=mysqli_query($conn, $insertr);
-                                        if($insertrresult){
-                                            $dltsql="DELETE FROM request_table WHERE property_id=$checkid";
-                                            mysqli_query($conn, $dltsql);
-                                            $updtsql="UPDATE property SET searchable=0 WHERE id=$checkid";
-                                            $updateproperty=mysqli_query($conn, $updtsql);
-                                            unset($_POST['valid_req']);
-                                            echo  
-                                            "<script> alert('done'); window.location.href='admin_purpose_valid.php'; </script> ";
-                                            //header("Refresh:0");
-                                        }else{
-                                            echo  "<script> alert('failed'); </script> ";
-                                         }
-                                    }
-                    
-                                    //implement alter or new insert
-                                }
-                            }//implement reject button
-                            if(isset($_POST['reject'])){
-                                $delemail=$userrows['user_email'];
-                                $dltmsql="DELETE FROM request_table WHERE user_email='$delemail'";
-                                mysqli_query($conn, $dltmsql);
-
-                            }
+                            //implement reject button
                             
                             echo "<script>
                             if ( window.history.replaceState ) {
@@ -242,16 +164,23 @@
                             </div>
 
                             <div class="buttons">
-                                <input type="submit" value="Validate User" id="valid_req" name="valid_req" class="btn">
+                                <!-- <input type="submit" value="Validate User" id="valid_req" name="valid_req" class="btn"> -->
+                                <a class="btn" href="valid_buy_rent.php?id=<?php echo $ID?>&email=<?php echo $userrows['user_email']?>&pur=<?php echo $purp?>" style="text-decoration:none"> <?php echo "Accept" ?></a> 
                             
-                                <input type="submit" value="Reject User" class="btn" id="reject" name="reject">
+                                <a class="btn" href="reject_request.php?id=<?php echo $ID?>&email=<?php echo $userrows['user_email']?>" style="text-decoration:none"> <?php echo "Reject" ?></a>
                             </div>
 
                         </block>
 
                         
 
+                        
+
                     </div>
+                    <?php
+                        }
+                        }
+                        ?>
 
 
                 </form>
@@ -259,26 +188,25 @@
 
                     
                 
-                </section>
-                <?php
-                    }
-                }
-                ?>
+            </section>
+                
 
                 
 
             </block>
+            
 
             
             
 
         </div>
+        
 
         
     </div>
 
 
-
+</section>
 
 </body>
 
