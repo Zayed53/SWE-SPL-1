@@ -5,17 +5,17 @@ require 'config.php';
 $purp=$_POST['purp'];
 if(isset($_POST['purp']))
 {
-    $query="purpose='$purp' AND valid=1 AND searchable=1";
+    $query="purpose='$purp' AND valid=1 AND searchable=1 ";
 }
 else
 {
-    $query="purpose='Sell' OR purpose = 'Rent' AND valid=1 AND searchable=1";
+    $query="purpose='Sell' OR purpose = 'Rent' AND valid=1 AND searchable=1 ";
 }
 
 $division=$_POST['Division'];
 if(!empty($division)){
     $query=$query."AND division='$division' ";
-    echo $division;
+
     
 }
 $district=$_POST['District'];
@@ -42,7 +42,7 @@ if(!empty($bath)){
     $query=$query."AND bath_num=$bath ";
 }
 
-//echo $query;
+
 
 $sql="SELECT * From property WHERE ".$query;
 $result=mysqli_query($conn, $sql);
