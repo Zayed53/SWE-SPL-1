@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information show</title>
+
+    <link rel="stylesheet" href="info_show.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+
+    <header>
+        <a class="site_name" href="/Home/home.html">THIKANA.COM</a>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="/Home/home.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="/Add Property/Add_Property.html">Add Property</a></li>
+            </ul>
+        </nav>
+        <p class="lbutton">Log in</p>
+    </header>
+
+    <section class="showInfo">
+        <span class="title">Details</span>
+
+        <div class="container">
+
+
+            <div class="form">
+
+                <block class="block">
+
+                    <section id="image-show">
+                        <!-- <img src="/Info Show/Arrr.png"/> -->
+
+                        <!-- Slider main container -->
+                        <div class="swiper">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide"> <img src="/Info Show/Arrr.png" /> </div>
+                                <div class="swiper-slide"> <img src="/Info Show/Arrr.png" /> </div>
+                                <div class="swiper-slide"> <img src="/Info Show/Arrr.png" /> </div>
+                                <div class="swiper-slide"> <img src="/Info Show/Arrr.png" /> </div>
+
+                            </div>
+
+                            <!-- If we need pagination -->
+                            <div class="swiper-pagination"></div>
+
+                            <!-- If we need navigation buttons -->
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+
+
+                        </div>
+
+                    </section>
+
+
+                    <section id="reviews">
+
+                        <div>
+                            <label id="review-text"> <strong> Reviews </strong> </label>
+                        </div>
+
+                        <div class="review-box">
+                            <label> If you are looking for a home within an affordable range then check this flat.
+                                Well fitted with gas, electricity and water supplies.
+                            </label>
+                        </div>
+
+                        <div class="review-box">
+                            <label> If you are looking for a home within an affordable range then check this flat.
+
+                            </label>
+                        </div>
+
+                        <div class="margin-top-2rem">
+                            <label id="review-text"> <strong> 4.3/5 </strong> </label>
+                        </div>
+
+                        <div class="margin-top-2rem">
+                            <input type="submit" value="Add Review" class="btn">
+                        </div>
+
+                    </section>
+
+                </block>
+
+
+                <block>
+
+                    <div class="results">
+                        <p>
+                            <label class="currency"> BDT </label>
+                            <label class="amount"> 50 Thousand </label>
+                        </p>
+
+                        <p>
+                            <label class="location"> 1st Colony, Mirpur, Dhaka </label>
+                        </p>
+
+                        <p>
+                            <label class="apartment"> Apartment </label>
+                        </p>
+
+                        <p>
+                            <label class="beds-baths"> Bedrooms: <strong>5</strong> </label>
+                            <label class="beds-baths"> Bathrooms: <strong>7</strong> </label>
+                            <label class="area"> Area: <strong>4000</strong> sqft </label>
+                        </p>
+
+                        <p>
+                            <label class="amenities"> Amenities: Green Sorroundings, Healthy environment </label>
+                        </p>
+
+                        <p>
+                            <label class="margin-top-2rem"> </label>
+                        </p>
+
+                        <p>
+                            <label class="description"> If you are looking for a home within an affordable range then
+                                check this flat.
+                                Well fitted with gas, electricity and water supplies, this flat is ideal to move in for
+                                new inhabitants.
+                                After entering the flat, you will find ample rooms cited for your recessing time and
+                                also happy dine hour.
+                                The kitchen area is just close to the dining space which gives the impression of ample
+                                light and space
+                                to have a content cooking time. Well-fitted bathrooms with resilient fixtures as per
+                                your prerequisites.
+                                Lots of restaurants, shopping places and schools are nearby as well as parks so the
+                                neighborhood is great as well.
+                            </label>
+                        </p>
+
+
+                        <p>
+                            <label class="margin-top-2rem"> </label>
+                        </p>
+                        <p>
+                            <label class="margin-top-2rem"> </label>
+                        </p>
+
+
+                    </div>
+
+
+                </block>
+
+
+
+                <block class="block">
+
+
+                    <div class="buttons">
+                        <input type="submit" value="Rent Request" class="btn">
+                    </div>
+
+                    <div class="buttons">
+                        <input type="submit" value="Rent Request" class="btn">
+                    </div>
+
+                </block>
+
+
+
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <script>
+
+        const swiper = new Swiper('.swiper', {
+
+            autoplay:
+            {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+
+            loop: true,
+
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+
+        });
+
+    </script>
+
+</body>
+
+</html>

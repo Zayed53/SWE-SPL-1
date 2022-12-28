@@ -1,0 +1,209 @@
+/* Google Font Import - Poformins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(/Images/todd-kent-178j8tJrNlc-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgb(0, 136, 169, 1);
+    min-height: 90vh;
+    height: auto;
+    margin-top: 2rem;
+
+}
+
+.title{
+    color: black;
+    display: flex;
+    align-items: center;  
+    justify-content: center;
+    position: relative;
+    font-size: 50px;
+    font-weight: 600;
+    padding-bottom: 2rem;
+}
+
+
+.container{
+    position: relative;
+    max-width: 90rem;
+    width: 100%;
+    background: #fff;
+    border-radius: 1.25rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 4rem;
+
+    min-height: 55rem;
+}
+
+.container .form{
+    padding: 3rem;
+}
+
+.block
+{
+    display: flex;  
+}
+
+
+#right-side
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#info-show
+{
+    width: 50%;
+}
+
+h2
+{
+    padding-top: 3rem;
+    padding-left: 12rem;
+}
+
+#image-upload
+{
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-input
+{
+    padding-bottom: 0.5rem;
+}
+
+.check-box
+{
+    padding-top: 2rem;
+    padding-left: 7rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    
+}
+
+.option-input
+{
+    position: relative;
+    height: 19px;
+    width: 19px;
+    display: inline-block;
+    cursor: pointer;
+    z-index: 10000000;
+}
+
+.textarea 
+{
+    background: aliceblue;
+    border-radius: 1.25rem;
+    border-color: black;
+    border-style: solid;
+    
+    padding: 1rem;
+    margin-top: 3rem;
+    margin-left: 3rem;
+
+    font-size: 1rem;
+    line-height: 1;
+    width: 40rem;
+    height: 16rem;
+    transition: all .2s;
+}
+  
+.textarea:hover 
+{
+    cursor: pointer;
+    background-color:azure;
+}
+  
+.textarea:focus 
+{
+    cursor: text;
+    color: black;
+    background-color: aliceblue;
+    border-color: red;
+}
+  
+
+#price
+{
+    line-height: 1.6;
+    width: 40rem;
+    height: 4rem;
+}
+
+p{
+    padding-bottom: 1rem;
+}
+
+
+label
+{
+    color: black;
+}
+
+.information
+{
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}   
+
+.information .line
+{
+    font-size: 1.6rem;
+}
+
+
+
+
+
+/* Buttons */
+
+.btn {
+    width: 20%;
+    
+    display: inline-block;
+    padding: 0.8rem 3.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    color: whitesmoke;
+    background: rgb(0, 136, 169, 1);
+    cursor: pointer;
+    text-align: center;
+
+    margin-top: 1rem;
+    margin-left: 0rem;
+}
+
+
+.btn:hover {
+    background-color: rgb(3, 113, 140);
+}
+
+.buttons
+{
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+}

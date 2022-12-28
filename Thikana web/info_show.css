@@ -1,0 +1,67 @@
+/* Google Font Import - Poformins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-image: url(/Images/todd-kent-178j8tJrNlc-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat; */
+    background-color: rgb(0, 136, 169, 1);
+    height: 155vh;
+}
+
+.container{
+    position: relative;
+    max-width: 50rem;
+    width: 100%;
+    background: #fff;
+    border-radius: 1.25rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 4rem;
+}
+
+.container .form{
+    padding: 60px;
+}
+
+.title{
+    color: white;
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 50px;
+    font-weight: 600;
+    padding-bottom: 2rem;
+}
+
+
+.information
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}   
+
+p{
+    padding-bottom: 1.5rem;
+}
+
+
+.information .line
+{
+    font-size: 1.6rem;
+}
+
