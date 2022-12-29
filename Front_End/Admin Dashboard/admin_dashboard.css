@@ -1,0 +1,76 @@
+/* Google Font Import - Poformins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-image: url(/Images/todd-kent-178j8tJrNlc-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat; */
+    background-color: rgb(0, 136, 169, 1);
+    height: 80vh;
+}
+
+.container{
+    position: relative;
+    max-width: 90rem;
+    width: 100%;
+    background: #fff;
+    border-radius: 1.25rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container .form{
+    padding: 60px;
+}
+
+.title{
+    color: white;
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 50px;
+    font-weight: 600;
+    padding-bottom: 2rem;
+}
+
+
+.dashboard
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+
+.btn
+{
+    color: aliceblue;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    background-color: rgb(0, 136, 169, 1);
+    border: none;
+    border-radius: 5em;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+
+    width: 20%;                        /*   making the buttons of the same width   */
+}
+
+.btn:hover
+{
+    background-color: rgb(0, 136, 169, 0.8);
+}

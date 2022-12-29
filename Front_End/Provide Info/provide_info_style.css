@@ -1,0 +1,248 @@
+/* Google Font Import - Poformins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.sidebar {
+    position: fixed;
+    width: 18.75rem;
+    height: 100%;
+    background: rgb(3, 113, 140);
+    /* margin-top: -2rem; */
+}
+
+.sidebar header {
+    color: white;
+    line-height: 5rem;
+    text-align: center;
+    background: rgb(3, 113, 140);
+    user-select: none;
+    font-size: 2.5rem;
+}
+
+.sidebar ul a {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    line-height: 4.75rem;
+    font-size: 1.25rem;
+    color: white;
+    padding-left: 2.5rem;
+    box-sizing: border-box;
+    border-bottom: .08rem solid rgb(255, 255, 255);
+    border-top: .08rem solid rgba(255, 255, 255, .1);
+    transition: .4s;
+}
+
+ul li:hover a {
+    padding-left: 3rem;
+    color: rgb(0, 0, 0);
+}
+
+.validate_info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-image: url(/Images/todd-kent-178j8tJrNlc-unsplash.jpg); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgb(0, 136, 169, 1);
+    min-height: 90vh;
+    height: auto;
+    /* margin-top: 2rem; */
+    margin-left: 300px;
+}
+
+.validate_info .title{
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;  
+    justify-content: center;
+    position: relative;
+    font-size: 50px;
+    font-weight: 600;
+    padding-bottom: 2rem;
+}
+
+
+.validate_info .container{
+    position: relative;
+    max-width: 90rem;
+    width: 100%;
+    background: #fff;
+    border-radius: 1.25rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 4rem;
+    min-height: 55rem;
+}
+
+.validate_info .container .form{
+    padding: 3rem;
+}
+
+.validate_info .block
+{
+    display: flex;  
+}
+
+
+#right-side
+{
+    padding-top: -5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#info-show
+{
+    width: 50%;
+}
+
+h2
+{
+    padding-top: 3rem;
+    padding-left: 12rem;
+}
+
+#image-upload
+{
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.validate_info .image-input
+{
+    padding-bottom: 0.5rem;
+}
+
+.validate_info .check-box
+{
+    padding-top: 2rem;
+    padding-left: 7rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    
+}
+
+.validate_info .option-input
+{
+    position: relative;
+    height: 19px;
+    width: 19px;
+    display: inline-block;
+    cursor: pointer;
+    z-index: 10000000;
+}
+
+.validate_info .textarea 
+{
+    background: aliceblue;
+    border-radius: 1.25rem;
+    border-color: black;
+    border-style: solid;
+    
+    padding: 1rem;
+    margin-top: 3rem;
+    margin-left: 3rem;
+
+    font-size: 1rem;
+    line-height: 1;
+    width: 40rem;
+    height: 16rem;
+    transition: all .2s;
+}
+  
+.validate_info .textarea:hover 
+{
+    cursor: pointer;
+    background-color:azure;
+}
+  
+.validate_info .textarea:focus 
+{
+    cursor: text;
+    color: black;
+    background-color: aliceblue;
+    border-color: red;
+}
+  
+
+#price
+{
+    line-height: 1.6;
+    width: 40rem;
+    height: 4rem;
+}
+
+p{
+    padding-bottom: 1rem;
+}
+
+
+label
+{
+    color: black;
+}
+
+.validate_info .information
+{
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}   
+
+.validate_info .information .line
+{
+    font-size: 1.4rem;
+}
+
+
+
+
+
+/* Buttons */
+
+.validate_info .btn {
+    width: 22%;
+
+    display: inline;
+    padding: 0.8rem 3.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    color: whitesmoke;
+    background: rgb(0, 136, 169, 1);
+    cursor: pointer;
+    text-align: center;
+
+    margin-top: 1rem;
+    margin-left: 0rem;
+}
+
+
+.validate_info .btn:hover {
+    background-color: rgb(3, 113, 140);
+}
+
+.validate_info .buttons
+{
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+}
