@@ -73,6 +73,7 @@ ul li:hover a {
     font-size: 50px;
     font-weight: 600;
     padding-bottom: 2rem;
+    padding-top: 2rem;
 }
 
 .user_validation .container{
@@ -107,6 +108,7 @@ ul li:hover a {
     min-width: 30rem;
     width: 90%;
     background: beige;
+    border-style: solid;
     border-radius: 1.25rem;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 
@@ -130,6 +132,7 @@ ul li:hover a {
     min-width: 18rem;
     width: 100%;
     background: beige;
+    border-style: solid;
     border-radius: 1.25rem;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 2rem;

@@ -73,6 +73,7 @@ ul li:hover a {
     font-size: 50px;
     font-weight: 600;
     padding-bottom: 2rem;
+    padding-top: 2rem;
 }
 
 
@@ -88,7 +89,9 @@ ul li:hover a {
 }
 
 .validate_info .container .form{
-    padding: 3rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 3rem;
 }
 
 .validate_info .block
@@ -108,13 +111,40 @@ ul li:hover a {
 
 #info-show
 {
+    margin-top: 3rem;
     width: 50%;
+}
+
+#property-information-title
+{
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
 }
 
 h2
 {
-    padding-top: 3rem;
-    padding-left: 12rem;
+    padding-right: 0rem;
+}
+
+
+.provide-image
+{
+    width: 70%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: beige;
+    border-radius: 1rem;
+    border-color: black;
+    border-style: solid;   
+    
+    padding: 1rem;
+
+    margin-left: 5rem;
 }
 
 #image-upload
@@ -133,9 +163,11 @@ h2
 .validate_info .check-box
 {
     padding-top: 2rem;
-    padding-left: 7rem;
-    font-size: 1.4rem;
+    padding-left: 3rem;
+    font-size: 1.5rem;
     font-weight: 600;
+
+    margin-bottom: 1rem;
     
 }
 
@@ -206,6 +238,13 @@ label
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    background-color: beige;
+    border-radius: 1rem;
+    border-color: black;
+    border-style: solid;
+
+    margin-bottom: 2rem;
 }   
 
 .validate_info .information .line
@@ -243,6 +282,6 @@ label
 .validate_info .buttons
 {
     display: flex;
-    align-items:center ;
+    align-items:center;
     justify-content: center;
 }
