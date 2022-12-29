@@ -70,7 +70,9 @@ ul li:hover a {
     position: relative;
     font-size: 50px;
     font-weight: 600;
+
     padding-bottom: 2rem;
+    margin-top: 1rem;
 }
 
 
@@ -80,6 +82,9 @@ ul li:hover a {
     width: 100%;
     background: #fff;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+
+    border-radius: 1rem;
+
     margin-bottom: 4rem;
     min-height: 55rem;
 }
