@@ -178,18 +178,8 @@ if(isset($_GET['id'])){
                         </p>
 
                         <p>
-                            <label class="description"> If you are looking for a home within an affordable range then
-                                check this flat.
-                                Well fitted with gas, electricity and water supplies, this flat is ideal to move in for
-                                new inhabitants.
-                                After entering the flat, you will find ample rooms cited for your recessing time and
-                                also happy dine hour.
-                                The kitchen area is just close to the dining space which gives the impression of ample
-                                light and space
-                                to have a content cooking time. Well-fitted bathrooms with resilient fixtures as per
-                                your prerequisites.
-                                Lots of restaurants, shopping places and schools are nearby as well as parks so the
-                                neighborhood is great as well.
+                            <label class="description"> 
+                            <?php echo $rows['Description']; ?>
                             </label>
                         </p>
 

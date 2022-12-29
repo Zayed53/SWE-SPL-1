@@ -103,11 +103,11 @@ if(isset($_POST['submit'])){
 
                     <form action="#" method="post">
                         <div class="input-field">
-                            <input type="text"  name="name" placeholder="Enter your name" required>
+                            <input type="text"  name="name" value="<?php echo isset($_POST['name']) ? $_POST['name'] : ''; ?>" placeholder="Enter your name" required>
                             <i class="uil uil-user"></i>
                         </div>
                         <div class="input-field">
-                            <input type="text"  name="email" id="email" placeholder="Enter your email" required>
+                            <input type="text"  name="email" id="email" value="<?php echo isset($_POST['email']) ? $_POST['email'] : ''; ?>"placeholder="Enter your email" required>
                             <i class="uil uil-envelope icon"></i>
                         </div>
                         <?php if($emailError1){?>
@@ -115,7 +115,7 @@ if(isset($_POST['submit'])){
                         <?php if($emailError2){?>
                         <p class="error_message"> Invalid Email </p><?php } ?>
                         <div class="input-field">
-                            <input type="text"  onkeypress="return onlyNumberKey(event)" name="nid" id="nid" placeholder="Enter your nid" required>
+                            <input type="text"  onkeypress="return onlyNumberKey(event)" name="nid" id="nid" value="<?php echo isset($_POST['nid']) ? $_POST['nid'] : ''; ?>"  placeholder="Enter your nid" required>
                             <i class="uil uil-user-circle"></i>
                         </div>
                         <?php if($NIDError1){?>
@@ -123,7 +123,7 @@ if(isset($_POST['submit'])){
                         <?php if($NIDError2){?>
                         <p class="error_message"> Invalid NID </p><?php } ?>
                         <div class="input-field">
-                            <input type="text"  onkeypress="return onlyNumberKey(event)" name="phone_no" id="phone_no" placeholder="Enter your phone no." required>
+                            <input type="text"  onkeypress="return onlyNumberKey(event)" name="phone_no" id="phone_no"  value="<?php echo isset($_POST['phone_no']) ? $_POST['phone_no'] : ''; ?>" placeholder="Enter your phone no." required>
                             <i class="uil uil-phone"></i>
                         </div>
                         <?php if($phoneError1){?>
@@ -131,7 +131,7 @@ if(isset($_POST['submit'])){
                         <?php if($phoneError2){?>
                         <p class="error_message"> Invalid Phone Number </p><?php } ?>
                         <div class="input-field">
-                            <input type="address"  name="address" id="address" placeholder="Enter your address" required>
+                            <input type="address"  name="address" id="address"  value="<?php echo isset($_POST['address']) ? $_POST['address'] : ''; ?>" placeholder="Enter your address" required>
                             <i class="uil uil-map-marker"></i>
                         </div>
                         <div class="input-field">

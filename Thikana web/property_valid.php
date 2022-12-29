@@ -5,17 +5,19 @@ if(isset($_GET['id'])){
     $sql="SELECT * FROM property WHERE id=$ID";
     $result=mysqli_query($conn, $sql);
     $rows=mysqli_fetch_array($result);
+    $picturecheck=false;
 }    //$ID=$rows['id'];
     if(isset($_POST['valid_it'])){
         //image part is here
         // will be updated.
-        if(!empty($_FILES["image"]["name"])){
-            $fileName = basename($_FILES["image"]["name"]);
+        if(!empty($_FILES["image3"]["name"])){
+            $picturecheck=true;
+            $fileName = basename($_FILES["image3"]["name"]);
             $fileType = pathinfo($fileName, PATHINFO_EXTENSION);
             // Allow certain file formats 
             $allowTypes = array('jpg', 'png', 'jpeg');
             if (in_array($fileType, $allowTypes)) {
-            $image = $_FILES['image']['tmp_name'];
+            $image = $_FILES['image3']['tmp_name'];
             $imgContent = addslashes(file_get_contents($image));
           
              
@@ -23,7 +25,38 @@ if(isset($_GET['id'])){
             $insert ="INSERT into images (id,image) VALUES ('$ID','$imgContent')";
             $sql=mysqli_query($conn, $insert);
             }
-        } else{
+        }if(!empty($_FILES["image1"]["name"])){
+            $picturecheck=true;
+            $fileName = basename($_FILES["image1"]["name"]);
+            $fileType = pathinfo($fileName, PATHINFO_EXTENSION);
+            // Allow certain file formats 
+            $allowTypes = array('jpg', 'png', 'jpeg');
+            if (in_array($fileType, $allowTypes)) {
+            $image = $_FILES['image1']['tmp_name'];
+            $imgContent = addslashes(file_get_contents($image));
+          
+             
+                //nsert image content into database 
+            $insert ="INSERT into images (id,image) VALUES ('$ID','$imgContent')";
+            $sql=mysqli_query($conn, $insert);
+            }
+        }if(!empty($_FILES["image2"]["name"])){
+            $picturecheck=true;
+            $fileName = basename($_FILES["image2"]["name"]);
+            $fileType = pathinfo($fileName, PATHINFO_EXTENSION);
+            // Allow certain file formats 
+            $allowTypes = array('jpg', 'png', 'jpeg');
+            if (in_array($fileType, $allowTypes)) {
+            $image = $_FILES['image2']['tmp_name'];
+            $imgContent = addslashes(file_get_contents($image));
+          
+             
+                //nsert image content into database 
+            $insert ="INSERT into images (id,image) VALUES ('$ID','$imgContent')";
+            $sql=mysqli_query($conn, $insert);
+            }
+        }
+         if(!$picturecheck){
             echo
             "<script> alert('please select a image'); </script> ";
         }
@@ -31,16 +64,18 @@ if(isset($_GET['id'])){
         $descript=$_POST['Discription'];
         $amenities=$_POST['amenities'];
         $price=$_POST['price'];
-        echo $descript.$amenities.$price;
-        $updt="UPDATE property SET valid = 1, Description= '$descript', amenities= '$amenities' , price=$price, searchable = 1 WHERE id = $ID";
-        $check=mysqli_query($conn, $updt);
-        if($check){
-            echo
-            "<script> alert('New Property is validated'); window.location.href='admin_valid.php'; </script> ";
-        }else{
-            echo
-            "<script> alert('Property validation failed'); </script> ";
-        }
+        echo $descript.$amenities.$price;///should be removed;
+        if($picturecheck&isset($_POST['checkbox'])){
+            $updt="UPDATE property SET valid = 1, Description= '$descript', amenities= '$amenities' , price=$price, searchable = 1 WHERE id = $ID";
+            $check=mysqli_query($conn, $updt);
+            if($check){
+                echo
+                "<script> alert('New Property is validated'); window.location.href='admin_valid.php'; </script> ";
+            }else{
+                echo
+                "<script> alert('Property validation failed'); </script> ";
+            }
+    }
     }else if(isset($_POST['not_valid_it'])){
         $delid=$rows['id'];
         $dlt="DELETE FROM property WHERE id=$delid";
@@ -135,15 +170,15 @@ if(isset($_GET['id'])){
                 
                     <h2>Give Image</h2>
                     <div id="image-upload" >
-                        <input type="file" name="image"/>
-                        <input type="file" name="image"/>
-                        <input type="file" name="image"/>
+                        <input type="file" name="image3"/>
+                        <input type="file" name="image1"/>
+                        <input type="file" name="image2"/>
                     </div>
                     <!-- <a href="item_add.php"> item add </a> <br>
                     <a href="LogOUT.php">Log out </a> -->
                     <div class="check-box">
 
-                        <input type="checkbox" class="option-input">
+                        <input type="checkbox" name="checkbox"class="option-input">
                         I Confirm that the information is valid
 
                     </div>

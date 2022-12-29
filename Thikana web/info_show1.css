@@ -140,6 +140,10 @@ p {
 }
 
 
+.review-section
+{
+  padding-left: 8rem;
+}
 
 #reviews {
     display: flex;
@@ -155,7 +159,7 @@ p {
 
 
 .review-box {
-    width: 90%;
+    width: 120%;
     background: aliceblue;
     border-radius: 1.25rem;
     border-color: black;
@@ -239,8 +243,14 @@ p {
     background: rgb(0, 136, 169, 1);
     cursor: pointer;
     text-align: center;
+    
 }
 
+
+.review-add .btn
+{
+  padding: 1rem;
+}
 
 .btn:hover {
     background-color: rgb(3, 113, 140);

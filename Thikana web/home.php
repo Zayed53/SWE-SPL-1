@@ -66,20 +66,6 @@ else{
                     <option value="Rent">Rent</option>
                     <option value="Sell">Sell</option>
                 </select>
-                <select name="Division" id="Division" class="inputBox">
-                    <option value="" disabled hidden selected>Division</option>
-                    <?php
-                        $sql="SELECT * FROM division";
-                        $result=mysqli_query($conn, $sql);
-                        while($rows=$result->fetch_assoc()){
-                            $val=$rows['Division']?>
-                            <option value="<?php echo $val; ?>" > <?php echo $val; ?>  </option>
-                        <?php
-                        }?>
-                </select>   
-
-                <!-- <input type="search" name="" placeholder="Division" id="" class="inputBox"> -->
-                <input type="search" name="District" placeholder="District" id="District" class="inputBox">
                 <select name="Area" id="Area" class="inputBox">
                     <option value="" disabled hidden selected>Area (sqft)</option>
                     <option value=0>  0    </option>
@@ -99,6 +85,20 @@ else{
                     <option value=50000>50000</option>
 
                 </select>
+                <select name="Division" id="Division" class="inputBox">
+                    <option value="" disabled hidden selected>Division</option>
+                    <?php
+                        $sql="SELECT * FROM division";
+                        $result=mysqli_query($conn, $sql);
+                        while($rows=$result->fetch_assoc()){
+                            $val=$rows['Division']?>
+                            <option value="<?php echo $val; ?>" > <?php echo $val; ?>  </option>
+                        <?php
+                        }?>
+                </select>   
+
+                <!-- <input type="search" name="" placeholder="Division" id="" class="inputBox"> -->
+                <input type="search" name="District" placeholder="District" id="District" class="inputBox">
                 <select name="Minprice" id="Minprice" class="inputBox">
                     <option value="" disabled hidden selected>Minimum price (BDT)</option>
                     <option value=5000> 5000/=</option>

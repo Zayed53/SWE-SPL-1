@@ -11,7 +11,7 @@ if(!empty($_SESSION["email"])){
         $check=true;
     }else{
         $check=false;
-        echo "<script> alert('No property is owned');window.location.href='user_info_dash.php'; </script> ";
+        echo "<script> alert('No property is rented');window.location.href='user_info_dash.php'; </script> ";
     }
     //$rows=mysqli_fetch_array($result);  
 }
@@ -42,8 +42,8 @@ else{
         <li><a href="home.php">Home</a></li>
         <li><a href="User_info_dash.php">User Information</a></li>
          <li><a href="User_Rent_Dash.php">Rented Properties</a></li>
-         <li><a href="User_own_dash.php">Owned properties</a></li>
-         <li><a href="LogOUT.php">LogOUT</a></li>
+         <li><a href="User_own_dash.php">Owned Properties</a></li>
+         <li><a href="LogOUT.php">Logout</a></li>
         </ul>
     </div>
 

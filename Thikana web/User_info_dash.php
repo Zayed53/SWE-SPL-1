@@ -7,7 +7,11 @@ if(!empty($_SESSION["email"])){
     $email=$_SESSION["email"];
     $sql="SELECT * From userstry WHERE email='$email'";
     $result=mysqli_query($conn, $sql);
-    $rows=mysqli_fetch_array($result);  
+    $rows=mysqli_fetch_array($result);
+    if(isset($_POST['pass_res'])){
+        header("location:reset_password_2.php");
+    }  
+    
 }
 else{
     $check=false;
@@ -35,8 +39,8 @@ else{
         <li><a href="home.php">Home</a></li>
          <li><a href="User_info_dash.php">User Information</a></li>
          <li><a href="User_Rent_Dash.php">Rented Properties</a></li>
-         <li><a href="User_own_dash.php">Owned properties</a></li>
-         <li><a href="LogOUT.php">LogOUT</a></li>
+         <li><a href="User_own_dash.php">Owned Properties</a></li>
+         <li><a href="LogOUT.php">Logout</a></li>
         </ul>
     </div>
 
@@ -50,7 +54,7 @@ else{
                 <div class="form">
 
 
-                    <form action="#">
+                    
 
                         <div class="results">
 
@@ -89,7 +93,7 @@ else{
 
                         
 
-                    </form>
+                    
 
 
                     
@@ -97,12 +101,13 @@ else{
 
                 </div>
 
-
+                <form action="#" method="post">
                         <div class="buttons">
 
-                                <input type="submit" value="Reset Password" class="btn">
+                                <input type="submit" value="Reset Password" name="pass_res"class="btn">
 
                         </div>
+                        </form>
 
         </div>
 

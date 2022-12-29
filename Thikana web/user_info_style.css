@@ -99,7 +99,7 @@ li, a, button{
     position: relative;
     max-width: 60rem;
     width: 100%;
-    background: #fff;
+    background: rgb(222, 220, 220);
     border-radius: 1.25rem;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     height: auto;

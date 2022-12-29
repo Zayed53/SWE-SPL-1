@@ -22,7 +22,7 @@ if(mysqli_num_rows($result)>0){
     $check=true;
 }else{
     $check=false;
-    echo "<script> alert('No result found'); </script> ";
+    echo "<script> alert('No result found');window.location.href='admin_dash.php'; </script> ";
 }
 ?>
 

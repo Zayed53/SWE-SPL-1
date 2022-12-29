@@ -42,8 +42,8 @@ else{
         <li><a href="home.php">home</a></li>
         <li><a href="User_info_dash.php">User Information</a></li>
          <li><a href="User_Rent_Dash.php">Rented Properties</a></li>
-         <li><a href="User_own_dash.php">Owned properties</a></li>
-         <li><a href="LogOUT.php">LogOUT</a></li>
+         <li><a href="User_own_dash.php">Owned Properties</a></li>
+         <li><a href="LogOUT.php">Logout</a></li>
         </ul>
     </div>
 
