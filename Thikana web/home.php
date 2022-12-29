@@ -36,14 +36,20 @@ else{
                 <li><a href="item_add">Add Property</a></li>
             </ul>
         </nav>
+
+        <div>
         <?php 
         if($check){
-        ?> <a class="button" href="LogOUT.php"><button> <?php echo $mail ?></button></a>
+        ?> <a class="button" href="User_info_dash.php"><button> <?php echo "Dashboard" ?></button></a>
         <?php } 
         else{
-        ?>    <a class="button" href="LogIN.php"><button>Login</button></a>
+        ?>    <a class="button" href="LogIN.php"><button>Login</button></a> 
+
+               <a class="button" href="registration.php" > <button>Sign Up</button></a> 
         <?php }
         ?>
+
+        </div>
     </header>
 
 

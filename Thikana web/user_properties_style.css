@@ -1,11 +1,24 @@
 /* Google Font Import - Poformins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+}
+
+li, a, button{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #e5f1f7;
+    text-decoration: none;
+}
+.lbutton{
+    opacity: 0;
 }
 
 body {
@@ -48,50 +61,60 @@ ul li:hover a {
     color: rgb(0, 0, 0);
 }
 
-.admin_valid{
+.show-properties{
     display: flex;
+    align-items: center;
     flex-direction: column;
-    /* background-image: url(/Images/todd-kent-178j8tJrNlc-unsplash.jpg);
+    justify-content: center;
+    background-image: url(Abstract_minimalistic_white_1920x1200.jpg);
     background-size: cover;
-    background-repeat: no-repeat; */
+    background-repeat: no-repeat;
     background-color: rgb(0, 136, 169, 1);
+    min-height: 45rem;
     height: auto;
-    min-height: 47rem;
-
-    padding-left: 2rem;
-    padding-top: 2rem;
-    margin-left: 18rem;
-}
-
-.container{
-    position: relative;
-    max-width: 70em;
-    width: 100%;
-    background: #fff;
-    border-radius: 1.25rem;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-}
-
-.container .form{
-    padding: 3rem;
+    margin-left: 300px
 }
 
 .title{
-    color: white;
+    color: black;
     display: flex;  
-    align-items: center;
     justify-content: center;
     position: relative;
     font-size: 50px;
     font-weight: 600;
     padding-bottom: 2rem;
+
+    margin-top: 1rem;
 }
 
+.container{
+    position: relative;
+    max-width: 80rem;
+    width: 69%;
+    background: #fff;
+    border-radius: 1.25rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+
+    margin-bottom: 1rem;
+}
+
+.container .form{
+    padding: 3rem;
+    display: flex;  
+    align-items: center;
+}
+
+img{
+    position: relative;
+    width: 17rem;
+    height: 17rem;
+}
 
 .results
 {
-    padding-left: 15rem;
+    padding-left: 2rem;
 }
+
 
 p{
     padding-bottom: 1rem;
@@ -138,6 +161,7 @@ p{
     font-size: 1.2rem;
     padding-right: 1rem;
 }
+
 .link
 {
     text-decoration: none;
@@ -147,33 +171,4 @@ p{
 label
 {
     color: black;
-}
-
-img{
-    position: relative;
-    width: 17rem;
-    height: 17rem;
-}
-
-
-.delete-user
-{
-    padding: 1.2rem;
-    max-width: 10rem;
-    background: rgb(0,136,169,1);
-    border-radius: 1.25rem;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-}
-
-.btn
-{
-    text-align: center;
-    color: white;
-}
-
-.box
-{
-    position: relative;
-    margin-top: 2rem;
-    padding-left: 22rem;
 }

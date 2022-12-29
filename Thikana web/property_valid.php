@@ -32,7 +32,7 @@ if(isset($_GET['id'])){
         $amenities=$_POST['amenities'];
         $price=$_POST['price'];
         echo $descript.$amenities.$price;
-        $updt="UPDATE property SET valid = 1, Description= '$descript', amenities= '$amenities' , price=$price WHERE id = $ID";
+        $updt="UPDATE property SET valid = 1, Description= '$descript', amenities= '$amenities' , price=$price, searchable = 1 WHERE id = $ID";
         $check=mysqli_query($conn, $updt);
         if($check){
             echo

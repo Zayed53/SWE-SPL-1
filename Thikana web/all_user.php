@@ -31,10 +31,10 @@ if(mysqli_num_rows($result)>0){
 <div class="sidebar">
         <header>THIKANA</header>
         <ul>
-         <li><a href="#" style="text-decoration:none">Validate Information</a></li>
-         <li><a href="#" style="text-decoration:none">Validate Property</a></li>
-         <li><a href="#" style="text-decoration:none">Validate User</a></li>
-         <li><a href="#" style="text-decoration:none">Validate Review</a></li>
+        <li><a href="admin_valid.php">View Request</a></li>
+         <li><a href="admin_purpose_valid.php">Enist property</a></li>
+         <li><a href="#">view all property</a></li>
+         <li><a href="Admin_review.php">View users</a></li>
         </ul>
 </div>
 <section class="admin_valid">
@@ -79,8 +79,15 @@ if(mysqli_num_rows($result)>0){
                     
                     
                 </div>
-                <div class="buttons">
-                <a class="btn"href="Delete_user.php?email=<?php echo $rows['email']?>" style="text-decoration:none"> <?php echo "Delete user" ?></a>
+
+               <div class="box"> 
+                         <a class="btn"href="Delete_user.php?email=<?php echo $rows['email']?>" style="text-decoration:none">
+                    <div class="delete-user">
+
+                         <?php echo "Delete user" ?>
+                    </div>
+                        </a>
+
                 </div>
 
             </form>

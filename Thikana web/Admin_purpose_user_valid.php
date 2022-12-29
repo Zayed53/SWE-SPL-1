@@ -22,10 +22,10 @@
 <div class="sidebar">
         <header>THIKANA</header>
         <ul>
-         <li><a href="/Provide Info/provide_info.html">Validate Information</a></li>
-         <li><a href="#">Validate Property</a></li>
-         <li><a href="/User Validation/user_validation.html">Validate User</a></li>
-         <li><a href="#">Validate Review</a></li>
+        <li><a href="admin_valid.php">View Request</a></li>
+         <li><a href="admin_purpose_valid.php">Enist property</a></li>
+         <li><a href="#">view all property</a></li>
+         <li><a href="Admin_review.php">View users</a></li>
         </ul>
 </div>
 

@@ -31,10 +31,10 @@ if(mysqli_num_rows($result)>0){
 <div class="sidebar">
         <header>THIKANA</header>
         <ul>
-         <li><a href="#" style="text-decoration:none">Validate Information</a></li>
-         <li><a href="#" style="text-decoration:none">Validate Property</a></li>
-         <li><a href="#" style="text-decoration:none">Validate User</a></li>
-         <li><a href="#" style="text-decoration:none">Validate Review</a></li>
+        <li><a href="admin_valid.php">View Requests</a></li>
+         <li><a href="admin_purpose_valid.php">Enlist Property</a></li>
+         <li><a href="#">View Properties</a></li>
+         <li><a href="Admin_review.php">View users</a></li>
         </ul>
     </div>
 

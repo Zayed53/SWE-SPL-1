@@ -17,7 +17,6 @@ body {
     position: fixed;
     width: 18.75rem;
     height: 100%;
-
     background: rgb(0, 33, 71);
     /* margin-top: -2rem; */
 }
@@ -26,7 +25,6 @@ body {
     color: white;
     line-height: 5rem;
     text-align: center;
-
     background: rgb(0, 33, 71);
     user-select: none;
     font-size: 2.5rem;
@@ -58,7 +56,6 @@ ul li:hover a {
     justify-content: center;
     background-size: cover;
     background-repeat: no-repeat;
-
     background-color: rgb(0, 33, 71);
     min-height: 90vh;
     height: auto;
@@ -103,16 +100,8 @@ ul li:hover a {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
-#image-upload
-{
-    padding-top: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 #info-show
 {

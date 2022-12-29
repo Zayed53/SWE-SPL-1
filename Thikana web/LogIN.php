@@ -1,6 +1,7 @@
 <?php
     require 'config.php';
     session_start();
+    $passError = $emailError = false;
     if(isset($_POST['login'])){
         $email=$_POST['email'];
         $password=$_POST['password'];
@@ -16,13 +17,11 @@
                 "<script> alert('login  done'); </script> ";
                 header("location: home.php");
             }else{
-                echo  
-                "<script> alert('wrong password'); </script> ";
+                $passError = true;
             }
 
         }else{
-            echo  
-            "<script> alert('Wrong Email'); </script> ";
+            $emailError = true;
         }
 
     }
@@ -70,11 +69,16 @@
                         <input type="text" name="email" id="email" placeholder="Enter your email" required>
                         <i class="uil uil-envelope icon"></i>
                     </div>
+                    <?php if($emailError){?>
+                        <p class="error_message"> Wrong Email </p><?php } ?>
+
                     <div class="input-field">
                         <input type="password" class="password" name="password" placeholder="Enter your password" required>
                         <i class="uil uil-lock icon"></i>
                         <i class="uil uil-eye-slash showHidepw"></i>
                     </div>
+                    <?php if($passError){?>
+                        <p class="error_message"> Wrong Password </p><?php } ?>
 
                     <div class="chechbox-text">
                         <div class="checkbox-content">
@@ -82,7 +86,7 @@
                             <label for="logCheck" class="text">Remember me</label>
                         </div>
 
-                        <a href="#" class="text">Forgot password?</a>
+                        <a href="forgot_password_1.php" class="text">Forgot password?</a>
                     </div>
 
                     <div class="input-field button">
