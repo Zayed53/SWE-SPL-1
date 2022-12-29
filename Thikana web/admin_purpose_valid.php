@@ -5,7 +5,7 @@ require 'config.php';
 
 //echo $query;
 
-$sql="SELECT * From request_table";
+$sql="SELECT DISTINCT property_id, purpose From request_table";
 $result=mysqli_query($conn, $sql);
 
 if(mysqli_num_rows($result)>0){
@@ -31,84 +31,13 @@ if(mysqli_num_rows($result)>0){
 <?php
     if($check){
        while($rows=$result->fetch_assoc()){
-        if(isset($_POST['valid_req'])){
-            if($rows['purpose']=="Rent"){
-                $checkid=$rows['property_id'];
-                $checksql="SELECT * FROM rents WHERE property_id=$checkid";
-                $checkresult=mysqli_query($conn, $checksql);
-                if(mysqli_num_rows($checkresult)>0){
-                    $newemail=$rows['user_email'];
-                    $update="UPDATE rents SET email='$newemail' WHERE property_id=$checkid";
-                    $updateresult=mysqli_query($conn, $update);
-                    if($updateresult){
-                        // echo
-                        // "<script> alert('done'); </script> ";
-                        $dltsql="DELETE FROM request_table WHERE property_id=$checkid";
-                        mysqli_query($conn, $dltsql);
-                        unset($_POST['valid_req']);
-                        echo  
-                        "<script> alert('done'); window.location.href='admin_purpose_valid.php'; </script> ";
-                        //header("Location:admin_purpose_valid.php");
-                    }else{
-                       echo  "<script> alert('failed'); </script> ";
-                    }
-                }else{
-                    $inemail=$rows['user_email'];
-                    $inid=$rows['property_id'];
-                    $insertr="INSERT INTO rents(email, property_id) VALUES ('$inemail', '$inid')";
-                    $insertrresult=mysqli_query($conn, $insertr);
-                    if($insertrresult){
-                        $dltsql="DELETE FROM request_table WHERE property_id=$checkid";
-                        mysqli_query($conn, $dltsql);
-                        unset($_POST['valid_req']);
-                        echo  
-                        "<script> alert('done'); window.location.href='admin_purpose_valid.php'; </script> ";
-                        //header("Location:admin_purpose_valid.php");
-                    }else{
-                        echo  "<script> alert('failed'); </script> ";
-                     }
-                }
-                
-                //implement alter or new insert
-            }
-            else if($rows['purpose']=="Sell"){
-                $checkid=$rows['property_id'];
-                $checksql="SELECT * FROM owns WHERE property_id=$checkid";
-                $checkresult=mysqli_query($conn, $checksql);
-                if(mysqli_num_rows($checkresult)>0){
-                    $newemail=$rows['user_email'];
-                    $update="UPDATE owns SET email='$newemail' WHERE property_id=$checkid";
-                    $updateresult=mysqli_query($conn, $update);
-                    if($updateresult){
-                        $dltsql="DELETE FROM request_table WHERE property_id=$checkid";
-                        mysqli_query($conn, $dltsql);
-                        unset($_POST['valid_req']);
-                        echo  
-                        "<script> alert('done'); window.location.href='admin_purpose_valid.php'; </script> ";
-                        //header("Refresh:0");
-                    }else{
-                       echo  "<script> alert('failed'); </script> ";
-                    }
-                }else{
-                    $inemail=$rows['user_email'];
-                    $inid=$rows['property_id'];
-                    $insertr="INSERT INTO owns(email, property_id) VALUES ('$inemail', '$inid')";
-                    $insertrresult=mysqli_query($conn, $insertr);
-                    if($insertrresult){
-                        $dltsql="DELETE FROM request_table WHERE property_id=$checkid";
-                        mysqli_query($conn, $dltsql);
-                        unset($_POST['valid_req']);
-                        echo  
-                        "<script> alert('done'); window.location.href='admin_purpose_valid.php'; </script> ";
-                        //header("Refresh:0");
-                    }else{
-                        echo  "<script> alert('failed'); </script> ";
-                     }
-                }
-
-                //implement alter or new insert
-            }
-        }
+        $ID=$rows['property_id'];
+        //echo $mail;
+        $detailssql="SELECT * FROM property WHERE id=$ID";
+        //echo $detailssql;
+        $detailresult=mysqli_query($conn, $detailssql);
+        //echo $detailresult;
+        $detailrows=mysqli_fetch_array($detailresult);
         echo "<script>
         if ( window.history.replaceState ) {
         window.history.replaceState( null, null, window.location.href );
@@ -138,7 +67,7 @@ if(mysqli_num_rows($result)>0){
                         <label class="property ID"><?php echo $rows['property_id']; ?> </label>
                     </p>
                     <p>
-                        <label class="user email"><?php echo $rows['user_email']; ?> </label>
+                        <label class="user email"><?php echo $detailrows['location']; ?> </label>
                     </p>
 
                     <p>
@@ -154,7 +83,7 @@ if(mysqli_num_rows($result)>0){
                         <label class="beds-baths"> Bathrooms: <strong><?php echo $rows['bath_num']; ?></strong> </label>
                         <label class="area"> Area: <strong><?php echo $rows['area']; ?></strong> sqft </label>
                     </p> --> 
-                    <!-- <input type="submit"  value="Validate Request" class="btn" id="valid_req" name="valid_req"> -->
+                    
         
 
                     
