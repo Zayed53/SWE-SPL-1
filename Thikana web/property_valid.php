@@ -69,6 +69,18 @@ if(isset($_GET['id'])){
     <link rel="stylesheet" href="provide_info_style.css">
 </head>
 <body>
+<div class="sidebar">
+   <header>THIKANA</header>
+    <ul>
+     <li><a href="/Provide Info/provide_info.html">Validate Information</a></li>
+     <li><a href="#">Validate Property</a></li>
+     <li><a href="/User Validation/user_validation.html">Validate User</a></li>
+     <li><a href="#">Validate Review</a></li>
+    </ul>
+</div>
+
+
+<section class="validate_info">
 
     <span class="title">Provide Information</span>
 
@@ -176,7 +188,7 @@ if(isset($_GET['id'])){
     
 
     
-
+</section>
 
 
 </body>

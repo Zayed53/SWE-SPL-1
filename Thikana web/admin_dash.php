@@ -7,6 +7,8 @@
         header("location:admin_purpose_valid.php");
     }else if(isset($_POST['review'])){
         header("location:Admin_review.php");
+    }else if(isset($_POST['view'])){
+        header("location:all_user.php");
     }
     
 ?>
@@ -55,7 +57,8 @@
                         
                     <input type="submit" value="view all property" class="btn" id="review" name="review">
                     
-                    <input type="button" value="Validate User" class="btn" id="">
+                    <input type="submit" value="view users" class="btn" id="view" name="view">
+
 
                     </div>
 

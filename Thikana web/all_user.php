@@ -5,7 +5,7 @@ require 'config.php';
 
 //echo $query;
 
-$sql="SELECT * From property WHERE valid=0";
+$sql="SELECT * From userstry";
 $result=mysqli_query($conn, $sql);
 
 if(mysqli_num_rows($result)>0){
@@ -36,16 +36,13 @@ if(mysqli_num_rows($result)>0){
          <li><a href="#" style="text-decoration:none">Validate User</a></li>
          <li><a href="#" style="text-decoration:none">Validate Review</a></li>
         </ul>
-    </div>
-
-    
+</div>
 <section class="admin_valid">
 <?php
     if($check){
        while($rows=$result->fetch_assoc()){
-            $id=$rows['id'];
+            // $id=$rows['id'];
         ?>
-
 
 
     <span class="title"></span>
@@ -53,7 +50,7 @@ if(mysqli_num_rows($result)>0){
     <div class="container">
         
 
-        <a class="link" href="property_valid.php?id=<?php echo $rows['id'] ?>">
+        <!-- <a class="link" href="property_valid.php?id=<?php echo $rows['id'] ?>"> -->
         
 
         <div class="form">
@@ -63,23 +60,28 @@ if(mysqli_num_rows($result)>0){
                 <div class="results">
                 
                     <p> 
-                        <label class="amount"> <?php echo "ID: ".$rows['id']; ?> </label> 
+                        <label class="amount"> <?php echo "Name: ".$rows['username']; ?> </label> 
                     </p>
                     
                     <p>
-                        <label class="location"><?php echo $rows['location'].",".$rows['district'].",".$rows['division']; ?> </label>
+                        <label class="location"><?php echo "Email: ".$rows['email']; ?> </label>
                     </p>
-                    
+                    <p>
+                        <label class="location"><?php echo "Phone No: ".$rows['phone_no']; ?> </label>
+                    </p>
+                    <p>
+                        <label class="amenities"> <?php echo "NID No: ".$rows['nid_no']; ?> </label>
+                    </p>
 
                     <p>
-                        <label class="apartment"> <?php echo $rows['seller_email']; ?>  </label>
+                        <label class="apartment"> <?php echo "address: ".$rows['address']; ?>  </label>
                     </p>
                     
-                    <p>
-                        <label class="amenities"> Purpose: <?php echo $rows['purpose']; ?> </label>
-                    </p>
+                    
                 </div>
-                
+                <div class="buttons">
+                <a class="btn"href="Delete_user.php?email=<?php echo $rows['email']?>" style="text-decoration:none"> <?php echo "Delete user" ?></a>
+                </div>
 
             </form>
             
@@ -88,9 +90,8 @@ if(mysqli_num_rows($result)>0){
 
 
         </div>
-       </a>
+       <!-- </a> -->
     </div>
-    
     
 
     
