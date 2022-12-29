@@ -132,6 +132,14 @@ if(isset($_GET['id'])){
 
                     <div class="information">
                         <p> 
+                            <label class="line"> Property ID: </label>
+                            <label class="line">  <strong> <?php echo $rows['id']; ?> </strong> </label>
+                        </p>
+                        <p> 
+                            <label class="line"> Seller Email : </label>
+                            <label class="line">  <strong> <?php echo $rows['seller_email']; ?> </strong> </label>
+                        </p>
+                        <p> 
                             <label class="line"> Number of rooms : </label>
                             <label class="line">  <strong> <?php echo $rows['room_num']; ?> </strong> </label>
                         </p>

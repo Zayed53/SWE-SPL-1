@@ -109,7 +109,10 @@ if(isset($_GET['id'])){
                             <label> 
                                 <?php echo "Rating:".$rev_rows['rate']."/5"."<br>".$rev_rows['text']."\n"."\t\t-".$rev_rows['reviewer_name']; ?>
                             </label>
-                            <input type="submit"  value="delete review" class="btn" id="del_rev" name="del_rev">
+                            <div class="">
+                                <!-- <input type="submit" value="Validate User" id="valid_req" name="valid_req" class="btn"> -->
+                                <a class="btn" href="Delete_review.php?email=<?php echo $rev_rows['reviewer_email']?>&text=<?php echo $rev_rows['text']?>&id=<?php echo $revid ?>" style="text-decoration:none"> <?php echo "Delete" ?></a> 
+                            </div>
                         </div>
                         </form>
                         <?php

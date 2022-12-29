@@ -1,79 +1,102 @@
 /* Google Font Import - Poformins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
+li, a, button{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #e5f1f7;
+    text-decoration: none;
+}
+.lbutton{
+    opacity: 0;
 }
 
-.sidebar {
-    position: fixed;
-    width: 18.75rem;
-    height: 100%;
-    background: rgb(0, 33, 71);
-    /* margin-top: -2rem; */
-}
-
-.sidebar header {
-    color: white;
-    line-height: 5rem;
-    text-align: center;
-    background: rgb(0, 33, 71);
-    user-select: none;
-    font-size: 2.5rem;
-}
-
-.sidebar ul a {
+header{
     display: flex;
-    height: 100%;
-    width: 100%;
-    line-height: 4.75rem;
-    font-size: 1.25rem;
-    color: white;
-    padding-left: 2.5rem;
-    box-sizing: border-box;
-    border-bottom: .08rem solid rgb(255, 255, 255);
-    border-top: .08rem solid rgba(255, 255, 255, .1);
-    transition: .4s;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: #081642;
 }
 
-ul li:hover a {
-    padding-left: 3rem;
-    color: rgb(0, 0, 0);
+.home form .btn:hover{
+    background-color: rgb(3, 113, 140);
 }
 
-.admin_valid{
+.site_name{
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 25px;
+}
+
+
+.nav_links{
+    list-style: none;
+}
+
+.nav_links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a{
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover{
+    color: #0088A9;
+}
+
+button{
+    padding: 9px 25px;
+    background-color: rgb(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover{
+    background-color: rgb(0, 136, 169, 0.8);
+}
+
+.search_result{
     display: flex;
     flex-direction: column;
-    /* background-image: url(/Images/todd-kent-178j8tJrNlc-unsplash.jpg);
+    align-items: center;
+    justify-content: center;
+    /* background-image: url(todd-kent-178j8tJrNlc-unsplash.jpg);
     background-size: cover;
-    background-repeat: no-repeat; */
-    background-color: rgb(0, 33,91);
+    background-repeat: fix, no-repeat; */
+    /* background-color: rgb(0, 136, 169, 1); */
     height: auto;
-    min-height: 47rem;
-
-    padding-left: 2rem;
-    padding-top: 2rem;
-    margin-left: 18rem;
 }
 
 .container{
     position: relative;
-    max-width: 70em;
+    max-width: 80rem;
     width: 100%;
     background: #fff;
     border-radius: 1.25rem;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* this is needed to be copied */
 .container .form{
-    padding: 3rem;
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 .title{
@@ -154,26 +177,7 @@ img{
     width: 17rem;
     height: 17rem;
 }
+body{
+    background-color: rgb(0, 33,91);
 
-
-.delete-user
-{
-    padding: 1.2rem;
-    max-width: 10rem;
-    background: rgb(0,136,169,1);
-    border-radius: 1.25rem;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-}
-
-.btn
-{
-    text-align: center;
-    color: white;
-}
-
-.box
-{
-    position: relative;
-    margin-top: 2rem;
-    padding-left: 22rem;
-}
+} 

@@ -34,7 +34,7 @@ if(mysqli_num_rows($result)>0){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Showing Search Result</title>
 
-    <link rel="stylesheet" href="search_result_style.css">
+    <link rel="stylesheet" href="search_result_style2.css">
 </head>
 
 <body>

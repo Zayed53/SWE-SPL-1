@@ -2,6 +2,15 @@
 
 <?php
 require 'config.php';
+session_start();
+if(!empty($_SESSION["email"])){
+    $checklog=true;
+    $mail=$_SESSION["name"];
+}
+else{
+    $checklog=false;
+    
+}
 $purp=$_POST['purp'];
 if(isset($_POST['purp']))
 {
@@ -9,7 +18,7 @@ if(isset($_POST['purp']))
 }
 else
 {
-    $query="purpose='Sell' OR purpose = 'Rent' AND valid=1 AND searchable=1 ";
+    $query="(purpose='Sell' OR purpose = 'Rent' )AND valid=1 AND searchable=1 ";
 }
 
 $division=$_POST['Division'];
@@ -53,7 +62,7 @@ if(mysqli_num_rows($result)>0){
     $check=false;
     echo "<script> alert('No result found'); </script> ";
 }
-?>
+?> 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -65,8 +74,29 @@ if(mysqli_num_rows($result)>0){
 
     <link rel="stylesheet" href="search_result_style.css">
 </head>
-
 <body>
+<header>
+        <a class="site_name" href="home.php">THIKANA.COM</a>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="home.php">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="item_add.php">Add Property</a></li>
+            </ul>
+        </nav>
+        <?php 
+        if($checklog){
+        ?> <a class="button" href="User_info_dash.php"><button> <?php echo "Dashboard" ?></button></a>
+        <?php } 
+        else{
+        ?>    <a class="button" href="LogIN.php"><button>Login</button></a>
+                <a class="button" href="registration.php"><button>Sign Up</button></a>
+        <?php }
+        ?>
+    </header>
+
 <?php
     if($check){
        while($rows=$result->fetch_assoc()){
@@ -76,6 +106,7 @@ if(mysqli_num_rows($result)>0){
             $imgrows=mysqli_fetch_array($resultimg);
         ?>
 
+    <section class="search_result">
     <span class="title"></span>
     
     <div class="container">
@@ -134,6 +165,7 @@ if(mysqli_num_rows($result)>0){
         </div>
        </a>
     </div>
+    </section>
     
 
     
@@ -154,6 +186,9 @@ if(mysqli_num_rows($result)>0){
 <!-- <!Doctype html>
 <html>
 <button onclick="listView()"><i class="fa fa-bars"></i> List</button> -->
+
+
+
 
 
 

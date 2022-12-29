@@ -11,18 +11,19 @@ if($logedin){
         $roomno=$_POST['room'];
         $bathno=$_POST['bath'];
         $apparea=$_POST['area'];
-        $division=$_POST['div'];
-        $district=$_POST['dist'];
+        $division=$_POST['Division'];
+        $district=$_POST['District'];
         $Location=$_POST['location'];
         $purpose=$_POST['purp'];
         $phn=$_SESSION["phn_no"];
         $email=$_SESSION["email"];
+        echo $purpose;
 
-    $insert= "INSERT INTO property ( price, room_num, bath_num, area, division, district, location, purpose, amenities,  seller_phone_no, seller_email, valid) VALUES ( 0,'$roomno', '$bathno', '$apparea', '$division', '$district', '$Location', '$purpose','none', '$phn', '$email', 0 )";
+    $insert= "INSERT INTO property ( price, room_num, bath_num, area, division, district, location, purpose, amenities,  seller_phone_no, seller_email, valid, searchable) VALUES ( 0,'$roomno', '$bathno', '$apparea', '$division', '$district', '$Location', '$purpose','none', '$phn', '$email', 0, 0)";
         $sql=mysqli_query($conn, $insert);
         if($sql){
             echo  
-            "<script> alert('New Property addition request sent'); window.location.href='home.php'; </script> "; // window.location.replace('home.php')
+            "<script> alert('New Property addition request sent'); window.location.href='home.php'; </script> ";
         }else{
             echo 
             "<script> alert('property addition  failed'); </script> ";
@@ -70,34 +71,87 @@ else{
             <span class="title">Add Property</span>
 
             <form action="#" method="post" >
-                <!-- price baad -->
+                <div class="input-field">
+                    <input type="text" onkeypress="return onlyNumberKey(event)" name="room" id="room"  placeholder="Enter Room Number" required>
+                </div>
+                <div class="input-field">
+                    <input type="text" onkeypress="return onlyNumberKey(event)" name="bath" id="bath" placeholder="Enter Bath Number" required>
+                </div>
+                <div class="input-field">
+                    <input type="text" onkeypress="return onlyNumberKey(event)" name="area" id="area" placeholder="Enter Apartment Size" required>
+                </div>
+                <div class="selectBox">
+                    <select name="Division" id="Division" class="selectBox">
+                        <option value="" disabled hidden selected>Division</option>
+                        <option value="Barisal">Barisal</option>
+                        <option value="Chittagong">Chittagong</option>
+                        <option value="Dhaka">Dhaka</option>
+                        <option value="Khulna">Khulna</option>
+                        <option value="Mymensingh">Mymensingh</option>
+                        <option value="Rajshahi">Rajshahi</option>
+                        <option value="Rangpur">Rangpur</option>
+                        <option value="Sylhet">Sylhet</option>
+                    </select>
+                </div>
+                <div class="selectBox">
+                    <select name="District" id="District" class="selectBox">
+                        <option value="" disabled hidden selected>District</option>
+                        <option value="" disabled >Barisal</option>
+                        <option value="Barisal">Barisal</option>
+                        <option value="Barguna">Barguna</option>
+                        <option value="Bhola">Bhola</option>
+                        <option value="Jhalokati">Jhalokati</option>
+                        <option value="Patuakhali">Patuakhali</option>
+                        <option value="Pirojpur">Pirojpur</option>
+                        <option value="" disabled >Chittagong</option>
+                        <option value="Brahmanbaria">Brahmanbaria</option>
+                        <option value="Comilla">Comilla</option>
+                        <option value="Chandpur">Chandpur</option>
+                        <option value="Lakshmipur">Lakshmipur</option>
+                        <option value="Noakhali">Noakhali</option>
+                        <option value="Feni">Feni</option>
+                        <option value="Khagrachhari">Khagrachhari</option>
+                        <option value="Rangamati">Rangamati</option>
+                        <option value="Bandarban">Bandarban</option>
+                        <option value="Chittagong">Chittagong</option>
+                        <option value="Cox's Bazar">Cox's Bazar</option>
+                        <option value="" disabled >Dhaka</option>
+                        <option value="Dhaka">Dhaka</option>
+                        <option value="Gazipur">Gazipur</option>
+                        <option value="Kishoreganj">Kishoreganj</option>
+                        <option value="Manikganj">Manikganj</option>
+                        <option value="Munshiganj">Munshiganj</option>
+                        <option value="Narayanganj">Narayanganj</option>
+                        <option value="Narsingdi">Narsingdi</option>
+                        <option value="Tangail">Tangail</option>
+                        <option value="Faridpur">Faridpur</option>
+                        <option value="Gopalganj">Gopalganj</option>
+                        <option value="Madaripur">Madaripur</option>
+                        <option value="Rajbari">Rajbari</option>
+                        <option value="Shariatpur">Shariatpur</option>
+                        <option value="" disabled >Khulna</option>
+                        <option value="" disabled >Mymensingh</option>
+                        <option value="" disabled >Rajshahi</option>
+                        <option value="" disabled >Rangpur</option>
+                        <option value="" disabled >Sylhet</option>
+                    </select>
+                </div>
                 <!-- <div class="input-field">
-                    <input type="number" name="price" placeholder="Enter Price" required>
-                </div> -->
-                <div class="input-field">
-                    <input type="number" name="room" id="room"  placeholder="Enter Room Number" required>
-                </div>
-                <div class="input-field">
-                    <input type="number"  name="bath" id="bath" placeholder="Enter Bath Number" required>
-                </div>
-                <div class="input-field">
-                    <input type="number"  name="area" id="area" placeholder="Enter Apartment Size" required>
-                </div>
-                <div class="input-field">
                     <input type="text"  name="div" id="div" placeholder="Enter Division" required>
                 </div>
                 <div class="input-field">
                     <input type="text"  name="dist" id="dist" placeholder="Enter District" required>
-                </div>
+                </div> -->
                 <div class="input-field">
                     <input type="text"  name="location" id="location" placeholder="Enter Location" required>
                 </div>
-                <div class="input-field">
-                    <input type="text"  name="purp" id="purp" placeholder="Enter Purpose" required>
+                <div class="selectBox">
+                    <select name="purp" id="purp" class="selectBox">
+                        <option value="" disabled hidden selected>Enter Purpose</option>
+                        <option value="Rent">Rent</option>
+                        <option value="Sell">Sell</option>
+                    </select>
                 </div>
-                <!-- <div class="input-field">
-                    <input type="text"  name="amin" id="amin" placeholder="Enter Aminities" required>
-                </div> -->
                 <div class="input-field button">
                     <input type="submit"  name="add" value="Submit">
                 </div>
@@ -105,39 +159,13 @@ else{
         </div>
     </div>
 </section>
+    <script>
+        function onlyNumberKey(evt) {
+            var ASCIICode = (evt.which) ? evt.which : evt.keyCode
+            if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
+                return false;
+            return true;
+        }
+    </script>
 </body>
 </html>
-
-<!-- <!Doctype html>
-<html>
-    <head>
-        <title>THIKANA</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css">
-    </head>
-    <body>
-        <h2>item_add</h2>
-        <form class="" action="" method="post" >
-            <label for="price">Price: </label>
-            <input type="number" name="price" value=""><br>
-            <label for="room">room number: </label>
-            <input type="number" name="room" id="room" value=""><br>
-            <label for="bath">bath number: </label>
-            <input type="number" name="bath" id="bath" value=""><br>
-            <label for="area">apartment size: </label>
-            <input type="number" name="area" id="area" value=""><br>
-            <label for="div">division: </label>
-            <input type="text" name="div" id="div" value=""><br>
-            <label for="dist">district: </label>
-            <input type="text" name="dist" id="dist" value=""><br>
-            <label for="local">local area: </label>
-            <input type="text" name="local" id="local" value=""><br>
-            <label for="location">location: </label>
-            <input type="text" name="location" id="location" value=""><br>
-            <label for="purp">purpose: </label>
-            <input type="text" name="purp" id="purp" value=""><br>
-            <label for="amin">aminities: </label>
-            <input type="text" name="amin" id="amin" value=""><br>
-            <input type="submit" name="add" value="Submit">
-        </form>
-    </body>
-</html> -->

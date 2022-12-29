@@ -36,19 +36,16 @@ else{
                 <li><a href="item_add">Add Property</a></li>
             </ul>
         </nav>
-
         <div>
         <?php 
         if($check){
         ?> <a class="button" href="User_info_dash.php"><button> <?php echo "Dashboard" ?></button></a>
         <?php } 
         else{
-        ?>    <a class="button" href="LogIN.php"><button>Login</button></a> 
-
-               <a class="button" href="registration.php" > <button>Sign Up</button></a> 
+        ?>    <a class="button" href="LogIN.php"><button>Login</button></a>
+              <a class="button" href="registration.php"><button>Sign Up</button></a>
         <?php }
         ?>
-
         </div>
     </header>
 
@@ -83,22 +80,60 @@ else{
                     <option value=35000>35000</option>
                     <option value=40000>40000</option>
                     <option value=50000>50000</option>
-
                 </select>
                 <select name="Division" id="Division" class="inputBox">
                     <option value="" disabled hidden selected>Division</option>
-                    <?php
-                        $sql="SELECT * FROM division";
-                        $result=mysqli_query($conn, $sql);
-                        while($rows=$result->fetch_assoc()){
-                            $val=$rows['Division']?>
-                            <option value="<?php echo $val; ?>" > <?php echo $val; ?>  </option>
-                        <?php
-                        }?>
-                </select>   
-
-                <!-- <input type="search" name="" placeholder="Division" id="" class="inputBox"> -->
-                <input type="search" name="District" placeholder="District" id="District" class="inputBox">
+                    <option value="Barisal">Barisal</option>
+                    <option value="Chittagong">Chittagong</option>
+                    <option value="Dhaka">Dhaka</option>
+                    <option value="Khulna">Khulna</option>
+                    <option value="Mymensingh">Mymensingh</option>
+                    <option value="Rajshahi">Rajshahi</option>
+                    <option value="Rangpur">Rangpur</option>
+                    <option value="Sylhet">Sylhet</option>
+                </select>
+                <select name="District" id="District" class="inputBox">
+                <option value="" disabled hidden selected>District</option>
+                        <option value="" disabled >Barisal</option>
+                        <option value="Barisal">Barisal</option>
+                        <option value="Barguna">Barguna</option>
+                        <option value="Bhola">Bhola</option>
+                        <option value="Jhalokati">Jhalokati</option>
+                        <option value="Patuakhali">Patuakhali</option>
+                        <option value="Pirojpur">Pirojpur</option>
+                        <option value="" disabled >Chittagong</option>
+                        <option value="Brahmanbaria">Brahmanbaria</option>
+                        <option value="Comilla">Comilla</option>
+                        <option value="Chandpur">Chandpur</option>
+                        <option value="Lakshmipur">Lakshmipur</option>
+                        <option value="Noakhali">Noakhali</option>
+                        <option value="Feni">Feni</option>
+                        <option value="Khagrachhari">Khagrachhari</option>
+                        <option value="Rangamati">Rangamati</option>
+                        <option value="Bandarban">Bandarban</option>
+                        <option value="Chittagong">Chittagong</option>
+                        <option value="Cox's Bazar">Cox's Bazar</option>
+                        <option value="" disabled >Dhaka</option>
+                        <option value="Dhaka">Dhaka</option>
+                        <option value="Gazipur">Gazipur</option>
+                        <option value="Kishoreganj">Kishoreganj</option>
+                        <option value="Manikganj">Manikganj</option>
+                        <option value="Munshiganj">Munshiganj</option>
+                        <option value="Narayanganj">Narayanganj</option>
+                        <option value="Narsingdi">Narsingdi</option>
+                        <option value="Tangail">Tangail</option>
+                        <option value="Faridpur">Faridpur</option>
+                        <option value="Gopalganj">Gopalganj</option>
+                        <option value="Madaripur">Madaripur</option>
+                        <option value="Rajbari">Rajbari</option>
+                        <option value="Shariatpur">Shariatpur</option>
+                        <option value="" disabled >Khulna</option>
+                        <option value="" disabled >Mymensingh</option>
+                        <option value="" disabled >Rajshahi</option>
+                        <option value="" disabled >Rangpur</option>
+                        <option value="" disabled >Sylhet</option>
+                </select>
+                <!-- <input type="search" name="District" placeholder="District" id="District" class="inputBox"> -->
                 <select name="Minprice" id="Minprice" class="inputBox">
                     <option value="" disabled hidden selected>Minimum price (BDT)</option>
                     <option value=5000> 5000/=</option>
@@ -151,7 +186,5 @@ else{
     <!-- <div class="background_image"></div> -->
 </body>
 </html>
-
-
 
 
