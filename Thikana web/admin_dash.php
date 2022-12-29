@@ -29,13 +29,13 @@
         <header>THIKANA</header>
         <ul>
          <li><a href="admin_valid.php">View Request</a></li>
-         <li><a href="admin_purpose_valid.php">Enist property</a></li>
-         <li><a href="#">view all property</a></li>
+         <li><a href="admin_purpose_valid.php">Enlist Property</a></li>
+         <li><a href="#">View Properties</a></li>
          <li><a href="Admin_review.php">View users</a></li>
         </ul>
     </div>
 
-    <section class="validate_info">
+    <section class="admin_dashboard">
 
         <span class="title"> Dashboard </span>
 
@@ -45,21 +45,105 @@
 
             <div class="form">
                 
+                <div class="welcome-admin">
+                <span >
+                    Welcome Admin!
+                </span>
+                </div>
 
                 <form action="#" method="post">
 
-                    <div class="dashboard">
+                    <block class="block">
                         
                     
-                    <input type="submit" value="View Requests" class="btn" id="valid_req" name="valid_req">
+                        <section id="left-one" >
 
-                    <input type="submit"  value="Enlist Property" class="btn" id="valid_prop" name="valid_prop">
+                            <div class="information">
+
+                                <p>
+                                    <strong>View Request</strong>
+                                </p>
+    
+                                <p>
+                                    Clients will look for their desired properties and will send rent 
+                                    or buy requests. The Admin will be able to look at all the requests 
+                                    that came from the client's side. Then the Admin will choose to accept
+                                    or reject the requests.
+                                </p>
+
+                            </div>
+                            
+
+                        </section>
+                      
+                        <section id="right-one">
                         
-                    <input type="submit" value="view all property" class="btn" id="review" name="review">
-                    
-                    <input type="submit" value="view users" class="btn" id="view" name="view">
+                            <div class="information">
 
-                    </div>
+                                <p >
+                                    <strong>Enlist Properties</strong>
+                                </p>
+    
+                                <p>
+                                    The list of properties will be shown here. The Admin will be
+                                    able to see all the properties that are to be listed. Then the 
+                                    Admin will be able to accept or reject the properties enlisted.
+                                </p>
+                                
+                            </div>
+
+                        </section>
+                
+    
+                    </block>
+
+
+                    <block class="block">
+                        
+                    
+                        <section id="left-one" >
+
+                            <div class="information">
+
+                                <p>
+                                    <strong>View Properties</strong>
+                                </p>
+    
+                                <p>
+                                    The properties will be listed here. The Admin will be able to 
+                                    see all the properties that are already listed in the website.
+                                    Then he/she will be able to perform necessary changes on the properties.
+                                </p>
+
+                            </div>
+                            
+
+                        </section>
+                      
+                        <section id="right-one">
+                        
+                            <div class="information">
+
+                                <p>
+                                    <strong>View Users</strong>
+                                </p>
+    
+                                <p>
+                                    There will several users listed here. The Admin will be able to
+                                    see already listed users and also the users that are yet to be 
+                                    validated. The Admin will be able to take proper actions after seeing
+                                    the user information.
+                                </p>
+                                
+                            </div>
+                            
+                        </section>
+                
+    
+                    </block>
+                    
+
+                    
 
 
 

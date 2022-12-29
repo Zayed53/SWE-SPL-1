@@ -17,7 +17,7 @@ body {
     position: fixed;
     width: 18.75rem;
     height: 100%;
-    background: rgb(0, 33, 71);
+    background: rgb(0, 11, 71);
     /* margin-top: -2rem; */
 }
 
@@ -25,7 +25,7 @@ body {
     color: white;
     line-height: 5rem;
     text-align: center;
-    background: rgb(0, 33, 71);
+    background: rgb(0, 11, 71);
     user-select: none;
     font-size: 2.5rem;
 }
@@ -46,10 +46,10 @@ body {
 
 ul li:hover a {
     padding-left: 3rem;
-    color: rgb(0, 0, 0);
+    color:aqua;
 }
 
-.validate_info{
+.admin_dashboard{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -62,7 +62,7 @@ ul li:hover a {
     margin-left: 300px;
 }
 
-.validate_info .title{
+.admin_dashboard .title{
     color: rgb(255, 255, 255);
     display: flex;
     align-items: center;  
@@ -70,124 +70,64 @@ ul li:hover a {
     position: relative;
     font-size: 50px;
     font-weight: 600;
+
     padding-bottom: 2rem;
+    padding-top: 2rem;
 }
 
 
-.validate_info .container{
+.admin_dashboard .container{
     position: relative;
     max-width: 90rem;
     width: 100%;
     background: #fff;
+    background-image: url(./alice-blue-bg.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 4rem;
     min-height: 55rem;
 }
 
-.validate_info .container .form{
+.admin_dashboard .container .form{
     padding: 3rem;
-}
 
-.validate_info .block
-{
-    display: flex;  
 }
 
 
-#right-side
+.welcome-admin
 {
-    padding-top: -5rem;
+    padding-left: 25rem;
+
+    font-weight: 800;
+    font-size: 4rem;
+
+    margin-bottom: 4rem;
+
+}
+
+
+.block
+{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-#info-show
-{
-    width: 50%;
-}
-
-h2
-{
-    padding-top: 3rem;
-    padding-left: 12rem;
-}
-
-#image-upload
-{
-    padding-top: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.validate_info .image-input
-{
-    padding-bottom: 0.5rem;
-}
-
-.validate_info .check-box
-{
     padding-top: 2rem;
-    padding-left: 7rem;
-    font-size: 1.4rem;
-    font-weight: 600;
+    padding-left : 6rem;
+}
+
+#left-one
+{
+    
+    min-width: 30rem;
+    width: 100%;
     
 }
 
-.validate_info .option-input
+#right-one
 {
-    position: relative;
-    height: 19px;
-    width: 19px;
-    display: inline-block;
-    cursor: pointer;
-    z-index: 10000000;
-}
+    min-width: 30rem;
+    width: 100%;
 
-.validate_info .textarea 
-{
-    background: aliceblue;
-    border-radius: 1.25rem;
-    border-color: black;
-    border-style: solid;
-    
-    padding: 1rem;
-    margin-top: 3rem;
-    margin-left: 3rem;
-
-    font-size: 1rem;
-    line-height: 1;
-    width: 40rem;
-    height: 16rem;
-    transition: all .2s;
-}
-  
-.validate_info .textarea:hover 
-{
-    cursor: pointer;
-    background-color:azure;
-}
-  
-.validate_info .textarea:focus 
-{
-    cursor: text;
-    color: black;
-    background-color: aliceblue;
-    border-color: red;
-}
-  
-
-#price
-{
-    line-height: 1.6;
-    width: 40rem;
-    height: 4rem;
-}
-
-p{
-    padding-bottom: 1rem;
 }
 
 
@@ -196,35 +136,42 @@ label
     color: black;
 }
 
-.validate_info .information
+.information
 {
-    padding-top: 1rem;
+    width: 80%;
+
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}   
 
-.validate_info .information .line
-{
-    font-size: 1.4rem;
+    background-color: beige;
+    border-radius: 1rem;
+    border-color: black;
+    border-style: solid;
+
+    min-height: 14rem;
+
+    font-size: 1.2rem;
+
+
 }
-
 
 
 
 
 /* Buttons */
 
-.validate_info .btn {
-    width: 22%;
+.admin_dashboard .btn {
+    width: 30%;
 
     display: inline;
-    padding: 0.8rem 3.5rem;
+    padding: 1.8rem 3.5rem;
     border-radius: 0.5rem;
-    font-size: 1rem;
+    font-size: 1.4rem;
     color: whitesmoke;
-    background: rgb(0, 136, 169, 1);
+    background: rgb(3, 113, 140);
     cursor: pointer;
     text-align: center;
 
@@ -233,11 +180,11 @@ label
 }
 
 
-.validate_info .btn:hover {
-    background-color: rgb(3, 113, 140);
+.admin_dashboard .btn:hover {
+    background-color: rgb(0, 136, 169, 1);
 }
 
-.validate_info .buttons
+.admin_dashboard .buttons
 {
     display: flex;
     align-items:center ;
