@@ -45,7 +45,7 @@
 </head>
 <body>
 <header>
-        <a class="site_name" href="/Home/home.html">THIKANA.COM</a>
+        <a class="site_name" href="/Home/home.html">THIKANA</a>
         <nav>
             <ul class="nav_links">
                 <li><a href="/Home/home.html">Home</a></li>
