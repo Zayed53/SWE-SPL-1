@@ -80,7 +80,7 @@ button:hover{
     justify-content: center;
     background:url(../Images/Abstract_minimalistic_white_1920x1200.jpg) no-repeat;
     background-size: cover;
-    min-height: 40rem;
+    min-height: 45rem;
     height: auto;
 }
 
@@ -97,8 +97,9 @@ button:hover{
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
     border:.1rem solid rgba(0,0,0,.2);
     text-align: center;
-    padding: 4rem;
-    width: 20rem;
+    padding: 3rem;
+    width: 30rem;
+
 }
 
 .services .box-container .box h3{
@@ -106,3 +107,6 @@ button:hover{
     color:#333;
 }
 
+p{
+    font-size: 1.2rem;
+}
