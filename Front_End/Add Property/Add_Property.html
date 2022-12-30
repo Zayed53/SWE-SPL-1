@@ -16,8 +16,8 @@
         <nav>
             <ul class="nav_links">
                 <li><a href="/Home/home.html">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
+                <li><a href="/About/about.html">About</a></li>
+                <li><a href="/Services/services.html">Services</a></li>
                 <li><a href="#">Contact</a></li>
                 <li><a href="/Add Property/Add_Property.html">Add Property</a></li>
             </ul>
@@ -55,8 +55,12 @@
                     <div class="input-field">
                         <input type="text" placeholder="Enter Location" required>
                     </div>
-                    <div class="input-field">
-                        <input type="text" placeholder="Enter Purpose" required>
+                    <div class="selectBox">
+                        <select name="purp" id="purp" class="selectBox">
+                            <option value="" disabled hidden selected>Enter Purpose</option>
+                            <option value="Rent">Rent</option>
+                            <option value="Sell">Sell</option>
+                        </select>
                     </div>
                     <div class="input-field">
                         <input type="text" placeholder="Enter Aminities" required>
