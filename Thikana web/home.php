@@ -26,7 +26,7 @@ else{
 </head>
 <body>
     <header>
-        <a class="site_name" href="#"><span>THIKANA.COM</a>
+        <a class="site_name" href="#"><span>THIKANA</a>
         <nav>
             <ul class="nav_links">
                 <li><a href="#">Home</a></li>

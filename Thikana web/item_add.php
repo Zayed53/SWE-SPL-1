@@ -53,7 +53,7 @@ else{
 </head>
 <body>
     <header>
-        <a class="site_name" href="home.php">THIKANA.COM</a>
+        <a class="site_name" href="home.php">THIKANA</a>
         <nav>
             <ul class="nav_links">
                 <li><a href="/Home/home.html">Home</a></li>
