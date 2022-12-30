@@ -80,14 +80,14 @@ button:hover{
     justify-content: center;
     background:url(../Images/Abstract_minimalistic_white_1920x1200.jpg) no-repeat;
     background-size: cover;
-    min-height: 45rem;
+    min-height: 40rem;
     height: auto;
 }
 
 .services .box-container{
     display: flex;
-    flex-wrap: wrap;
-    gap:5.5rem;
+    flex-wrap: inherit;
+    gap:1.5rem;
 }
 
 .services .box-container .box{
@@ -98,8 +98,9 @@ button:hover{
     border:.1rem solid rgba(0,0,0,.2);
     text-align: center;
     padding: 3rem;
-    width: 30rem;
+    width: 20rem;
 
+    font-size: 1.1rem;
 }
 
 .services .box-container .box h3{
@@ -107,6 +108,8 @@ button:hover{
     color:#333;
 }
 
-p{
-    font-size: 1.2rem;
+
+.name
+{
+    font-weight: bold;
 }
