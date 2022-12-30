@@ -52,6 +52,7 @@ button{
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
+    opacity: 0;
 }
 
 button:hover{
@@ -77,9 +78,9 @@ button:hover{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background:url(../Images/todd-kent-178j8tJrNlc-unsplash.jpg) no-repeat;
+    background:url(../Images/Abstract_minimalistic_white_1920x1200.jpg) no-repeat;
     background-size: cover;
-    min-height: 45rem;
+    min-height: 40rem;
     height: auto;
 }
 
