@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+li, a, button{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #e5f1f7;
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: #081642;
+}
+
+.site_name{
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 25px;
+}
+
+.nav_links{
+    list-style: none;
+}
+
+.nav_links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a{
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover{
+    color: #0088A9;
+}
+
+button{
+    padding: 9px 25px;
+    background-color: rgb(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    opacity: 0;
+}
+
+button:hover{
+    background-color: rgb(0, 136, 169, 0.8);
+}
+
+.heading{
+    text-align: center;
+    color:#333;
+    font-size: 4rem;
+    padding-bottom: 3rem;
+}
+
+.heading span{
+    color:rgb(0, 136, 169, 1);
+    background:rgb(255, 255, 255);
+    border-radius: .5rem;
+    padding:.2rem 1.5rem;
+}
+
+.services{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background:url(Abstract_minimalistic_white_1920x1200.jpg) no-repeat;
+    background-size: cover;
+    min-height: 40rem;
+    height: auto;
+}
+
+.services .box-container{
+    display: flex;
+    flex-wrap: inherit;
+    gap:1.5rem;
+}
+
+.services .box-container .box{
+    flex:auto;
+    border-radius: .75rem;
+    background:#fff;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    border:.1rem solid rgba(0,0,0,.2);
+    text-align: center;
+    padding: 3rem;
+    width: 20rem;
+
+    font-size: 1.1rem;
+}
+
+.services .box-container .box h3{
+    font-size: 2.5rem;
+    color:#333;
+}
+
+
+.name
+{
+    font-weight: bold;
+}

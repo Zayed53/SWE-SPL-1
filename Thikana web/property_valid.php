@@ -107,10 +107,10 @@ if(isset($_GET['id'])){
 <div class="sidebar">
    <header>THIKANA</header>
     <ul>
-     <li><a href="/Provide Info/provide_info.html">Validate Information</a></li>
-     <li><a href="#">Validate Property</a></li>
-     <li><a href="/User Validation/user_validation.html">Validate User</a></li>
-     <li><a href="#">Validate Review</a></li>
+        <li><a href="admin_valid.php" style="text-decoration:none">View Requests</a></li>
+         <li><a href="admin_purpose_valid.php" style="text-decoration:none">Enlist Property</a></li>
+         <li><a href="Admin_review.php" style="text-decoration:none">View Properties</a></li>
+         <li><a href="all_user" style="text-decoration:none">View users</a></li>
     </ul>
 </div>
 

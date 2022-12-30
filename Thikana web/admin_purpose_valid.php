@@ -24,10 +24,20 @@ if(mysqli_num_rows($result)>0){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Showing Search Result</title>
 
-    <link rel="stylesheet" href="search_result_style.css">
+    <link rel="stylesheet" href="Admin_search_result_style.css">
 </head>
 
 <body>
+<div class="sidebar">
+        <header>THIKANA</header>
+        <ul>
+        <li><a href="admin_valid.php" style="text-decoration:none">View Requests</a></li>
+         <li><a href="admin_purpose_valid.php" style="text-decoration:none">Enlist Property</a></li>
+         <li><a href="Admin_review.php" style="text-decoration:none">View Properties</a></li>
+         <li><a href="all_user" style="text-decoration:none">View users</a></li>
+        </ul>
+    </div>
+<section class="admin_valid">
 <?php
     if($check){
        while($rows=$result->fetch_assoc()){
@@ -110,7 +120,7 @@ if(mysqli_num_rows($result)>0){
 
     <?php }
     } ?>
-
+</section>
 </body>
 
 </html>

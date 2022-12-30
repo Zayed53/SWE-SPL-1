@@ -63,7 +63,7 @@ else{
         <div class="container">
         
 
-            <a class="link" href="/Info Show/info_show.html">
+            <a class="link" href="info_show_dash.php?id=<?php echo $proprows['id']; ?>">
 
                 <div class="form">
                 <?php

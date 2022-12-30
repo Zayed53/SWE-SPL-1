@@ -42,14 +42,14 @@ if (isset($_POST['reset'])) {
 <body>
 
     <header>
-        <a class="site_name" href="LogIN"><span>THIKANA.COM</a>
+        <a class="site_name" href="home.php"><span>THIKANA.COM</a>
         <nav>
             <ul class="nav_links">
-                <li><a href="LogIN">Home</a></li>
+                <li><a href="home.php">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Services</a></li>
                 <li><a href="#">Contact</a></li>
-                <li><a href="item_add">Add Property</a></li>
+                <li><a href="item_add.php">Add Property</a></li>
             </ul>
         </nav>
         <p class="lbutton">Log in</p>

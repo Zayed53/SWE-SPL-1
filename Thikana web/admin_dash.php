@@ -30,8 +30,8 @@
         <ul>
          <li><a href="admin_valid.php">View Request</a></li>
          <li><a href="admin_purpose_valid.php">Enlist Property</a></li>
-         <li><a href="#">View Properties</a></li>
-         <li><a href="Admin_review.php">View users</a></li>
+         <li><a href="Admin_review.php">View Properties</a></li>
+         <li><a href="all_user">View users</a></li>
         </ul>
     </div>
 

@@ -80,14 +80,14 @@ if(isset($_POST['submit'])){
 </head>
 <body>
     <header>
-        <a class="site_name" href="/Home/home.html">THIKANA.COM</a>
+        <a class="site_name" href="home.php">THIKANA</a>
         <nav>
             <ul class="nav_links">
                 <li><a href="home.php">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="/Add Property/Add_Property.html">Add Property</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="item_add.php">Add Property</a></li>
             </ul>
         </nav>
         <p class="lbutton">Log in</p>

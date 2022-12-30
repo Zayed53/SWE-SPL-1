@@ -80,8 +80,8 @@ if(mysqli_num_rows($result)>0){
         <nav>
             <ul class="nav_links">
                 <li><a href="home.php">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
                 <li><a href="#">Contact</a></li>
                 <li><a href="item_add.php">Add Property</a></li>
             </ul>

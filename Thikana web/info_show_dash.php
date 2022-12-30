@@ -106,8 +106,8 @@ if(isset($_POST['review'])){
             <ul class="nav_links">
                 <li><a href="home.php">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="services.com">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
                 <li><a href="item_add">Add Property</a></li>
             </ul>
         </nav>
@@ -314,27 +314,7 @@ if(isset($_POST['review'])){
 
 
 
-                <block class="block">
-
-                    <form id="button_form" method="post">
-                    <?php 
-                    if($check) {
-                        if($rows['purpose']=="Rent"){?>
-                        <div class="buttons">
-                            <input type="submit" value="Rent Request" class="btn" name="Rent" id="Rent">
-                        </div>
-                        <?php 
-                        }else{ ?>
-
-                        <div class="buttons">
-                            <input type="submit" value="Buy Request" class="btn" id="Buy" name="Buy">
-                        </div>
-                        <?php 
-                        }
-                    } ?>
-                    </form>
-
-                </block>
+              
 
 
 

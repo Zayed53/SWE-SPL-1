@@ -49,14 +49,14 @@ if (isset($_POST['continue_2'])) {
 <body>
 
     <header>
-        <a class="site_name" href="LogIN"><span>THIKANA.COM</a>
+        <a class="site_name" href="LogIN"><span>THIKANA</a>
         <nav>
             <ul class="nav_links">
                 <li><a href="LogIN">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="item_add">Add Property</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="cpntact.html">Contact</a></li>
+                <li><a href="item_add.php">Add Property</a></li>
             </ul>
         </nav>
         <p class="lbutton">Log in</p>
